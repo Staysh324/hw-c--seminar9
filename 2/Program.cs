@@ -16,19 +16,18 @@ int SumNumbers(int min, int max) // рекурсивный метод сложе
         return 0;
     }
     return max + SumNumbers(min, max - 1);
-
 }
 
 
 int min = InputInt("введитме минимальный порог");
 int max = InputInt("введите максимальный порог");
+
 if (min > max)
 {
     System.Console.WriteLine("минимальное число не может быть больше максимального");
 }
 else
 {
-    int sum = SumNumbers(min, max);
-    System.Console.WriteLine($"сумма чисел от {min} до {max} = {sum}");
+    System.Console.WriteLine($"сумма чисел от {min} до {max} = {SumNumbers(min, max)}");
 }
 

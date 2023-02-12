@@ -13,10 +13,12 @@ int AkkernanFunction(int n, int m) // рекурсивный метод вычи
     {
         return m + 1;
     }
+
     if (n > 0 && m == 0)
     {
         return AkkernanFunction(n - 1, 1);
     }
+    
     if (n > 0 && m > 0)
     {
         return AkkernanFunction(n - 1, AkkernanFunction(n, m - 1));
